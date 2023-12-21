@@ -26,7 +26,7 @@ public class Order implements Serializable {
 
 	private Integer orderStatus;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "client_id")
 	private User client;
 
